@@ -1,0 +1,120 @@
+/* ==============================
+   MAIN LAYOUT WRAPPER
+============================== */
+
+main {
+  position: relative;
+  flex: 1;
+  width: 100%;
+}
+
+/* ==============================
+   SECTIONS GLOBAL SPACING
+   (regola chiave del progetto)
+============================== */
+
+main section {
+  padding: 80px 0;
+  width: 100%;
+}
+
+/* ==============================
+   HOME PAGE OVERRIDES
+============================== */
+
+main.home {
+  display: block;
+}
+
+/* HERO BACKGROUND (solo home) */
+main.home .hero {
+  background-image: url("../assets/images/bg-hero-mob.png");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+/* ==============================
+   OPTIONAL LAYOUT ELEMENTS
+   (solo se realmente usati)
+============================== */
+
+main.home img.info {
+  max-width: 100px;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+main.home img.prize {
+  max-width: 180px;
+  width: 100%;
+}
+
+/* CARD SYSTEM SPECIFICO HOME */
+main.home .green-card-container {
+  background-color: var(--primary);
+  border-radius: var(--radius);
+  padding: var(--space-3);
+}
+
+main.home .light-green-card-container {
+  background-color: #388e39;
+  border-radius: var(--radius);
+  padding: var(--space-3);
+  margin: 0 var(--space-2);
+}
+
+/* ==============================
+   LOADER
+============================== */
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+}
+/* ==============================
+   RESPONSIVE
+============================== */
+
+/* TABLET */
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+  main section {
+    padding: 100px 0;
+  }
+
+  main.home img.info {
+    max-width: 150px;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 992px) {
+  main.home .hero {
+    background-image: url("../assets/images/bg-hero.png");
+  }
+
+  main.home section {
+    padding: 120px 0;
+  }
+}
+
+/* LARGE DESKTOP */
+@media (min-width: 1200px) {
+  main section {
+    padding: 140px 0;
+  }
+}
+
+/* ULTRA WIDE */
+@media (min-width: 1400px) {
+  main section {
+    padding: 160px 0;
+  }
+}

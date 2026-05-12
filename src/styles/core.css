@@ -1,0 +1,259 @@
+/* ==================================================
+FONT FACE
+================================================== */
+
+@font-face {
+  font-family: "ClashDisplay";
+  src:
+    url("/fonts/ClashDisplay-Variable.woff2") format("woff2"),
+    url("/fonts/ClashDisplay-Variable.woff") format("woff");
+  font-weight: 200 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ==============================
+  ROOT (DESIGN SYSTEM)
+============================== */
+:root {
+  /* COLORS */
+  --bg: #f7f3ea;
+  --primary: #5e7468;
+  --secondary: #dfe4da;
+  --white: #ffffff;
+  --text: #5e7468;
+
+  --font-main: "ClashDisplay", sans-serif;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.9rem;
+  --text-md: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.35rem;
+
+  --h5: 1rem;
+  --h4: 1.25rem;
+  --h3: 1.6rem;
+  --h2: 2rem;
+  --h1: 2.6rem;
+  --hero: 3rem;
+}
+
+/* ==============================
+  RESET
+============================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  background: var(--bg);
+  color: var(--text);
+  font-weight: 400;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* ==============================
+  ELEMENT BASE
+============================== */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* ==================================================
+TEXT SCALE
+================================================== */
+
+.text-xs {
+  font-size: var(--text-xs);
+}
+.text-sm {
+  font-size: var(--text-sm);
+}
+.text-md {
+  font-size: var(--text-md);
+}
+.text-lg {
+  font-size: var(--text-lg);
+}
+.text-xl {
+  font-size: var(--text-xl);
+}
+
+/* ==================================================
+HEADINGS
+================================================== */
+
+p {
+  font-size: var(--text-md);
+}
+
+h5 {
+  font-size: var(--h5);
+  font-weight: 500;
+}
+
+h4 {
+  font-size: var(--h4);
+  font-weight: 500;
+}
+
+h3 {
+  font-size: var(--h3);
+  font-weight: 500;
+}
+
+h2 {
+  font-size: var(--h2);
+  font-weight: 500;
+}
+
+h1 {
+  font-size: var(--h1);
+  font-weight: 600;
+  line-height: 1.05;
+}
+
+/* ==============================
+  BUTTON BASE
+============================== */
+.btn {
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+  padding: 12px 26px;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+/* ==============================
+  LAYOUT HELPERS (MINIMALI)
+============================== */
+.text-center {
+  text-align: center;
+}
+
+/* ==============================
+  TEXT WEIGHTS
+============================== */
+
+.text-black {
+  font-weight: 900 !important;
+}
+
+.text-bold {
+  font-weight: 700 !important;
+}
+
+.text-semi {
+  font-weight: 600 !important;
+}
+
+.text-regular {
+  font-weight: 400 !important;
+}
+
+.text-thin {
+  font-weight: 300 !important;
+}
+
+/* GSAP */
+
+.reveal-section {
+  will-change: transform, opacity;
+}
+
+/* hword stagger */
+
+.word-wrap {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+}
+
+.word {
+  display: inline-block;
+  will-change: transform, opacity;
+}
+
+/* ==============================
+  XS (mobile)
+============================== */
+@media (max-width: 576px) {
+  :root {
+    --hero: 3.5rem;
+    --h1: 3rem;
+    --h2: 2.3rem;
+  }
+}
+
+/* ==============================
+  MD (tablet)
+============================== */
+@media (max-width: 768px) {
+  :root {
+    --hero: 4.2rem;
+    --h1: 3.6rem;
+    --h2: 2.6rem;
+    --h3: 1.8rem;
+  }
+}
+
+/* ==============================
+  LG (small desktop)
+============================== */
+@media (max-width: 992px) {
+  :root {
+    --hero: 5rem;
+    --h1: 4.2rem;
+    --h2: 3rem;
+    --h3: 2rem;
+    --text-md: 1.05rem;
+  }
+}
+
+/* ==============================
+  XL (desktop large)
+============================== */
+@media (max-width: 1200px) {
+  :root {
+    --hero: 6rem;
+    --h1: 5rem;
+    --h2: 3.4rem;
+  }
+}
+
+/* ==============================
+  XXL (wide screens)
+============================== */
+@media (min-width: 1440px) {
+  :root {
+    --hero: 7rem;
+    --h1: 5.8rem;
+    --h2: 3.8rem;
+  }
+}
