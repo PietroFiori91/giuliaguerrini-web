@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export const initgsap = () => {
-  ScrollTrigger.killAll(false, true, true);
+  ScrollTrigger.refresh();
 
   /**
    * HERO TITLE TIMELINE
@@ -15,25 +15,82 @@ export const initgsap = () => {
 
   gsap.context(() => {
     const tlHero = gsap.timeline({
-      defaults: { ease: "power3.out" },
+      defaults: { ease: "power2.out" }, // meno “energico” di power3
     });
 
     tlHero
-      .from(".line-1", { y: 120, opacity: 0, duration: 1.1 })
-      .from(".line-2", { y: 120, opacity: 0, duration: 1.1 }, "-=0.9")
-      .from(".icon", { opacity: 0, scale: 0.9, duration: 0.9 }, "-=0.7")
-      .from(".hero-desc", { y: 20, opacity: 0, duration: 0.9 }, "-=0.6")
+      .from(".line-1", {
+        y: 70,
+        opacity: 0,
+        duration: 1.1,
+      })
+
       .from(
+        ".line-2",
+        {
+          y: 70,
+          opacity: 0,
+          duration: 1.1,
+        },
+        "-=0.85",
+      )
+
+      .from(
+        ".icon",
+        {
+          opacity: 0,
+          scale: 0.97,
+          duration: 0.9,
+        },
+        "-=0.75",
+      )
+
+      .from(
+        ".hero-desc",
+        {
+          y: 10,
+          opacity: 0,
+          duration: 0.9,
+        },
+        "-=0.7",
+      )
+
+      .fromTo(
         ".hero-btn",
-        { y: 25, opacity: 0, scale: 0.96, duration: 0.9 },
+        {
+          y: 14,
+          autoAlpha: 0,
+          scale: 0.98,
+        },
+        {
+          y: 0,
+          autoAlpha: 1,
+          scale: 1,
+          duration: 0.9,
+        },
         "-=0.6",
       );
   }, hero);
+
+  const clouds = document.querySelector(".hero-clouds");
+  const sun = document.querySelector(".hero-sun");
+
+  if (clouds && sun) {
+    gsap.from([clouds, sun], {
+      opacity: 0,
+      scale: 1.05,
+      duration: 1.6,
+      ease: "power2.out",
+      delay: 1.2, // 👈 parte dopo hero
+      stagger: 0.2,
+    });
+  }
 
   /**
    * BASE REVEAL (default)
    */
   gsap.utils.toArray(".reveal-section").forEach((el) => {
+    if (el.id === "hero") return;
     gsap.from(el, {
       opacity: 0,
       y: 50,

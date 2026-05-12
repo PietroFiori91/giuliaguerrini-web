@@ -140,7 +140,7 @@ onBeforeUnmount(() => {
   z-index: 999;
   background: var(--bg);
   backdrop-filter: blur(10px);
-  background: rgba(247, 243, 234, 0.7);
+  background: transparent;
   transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: transform;
 }

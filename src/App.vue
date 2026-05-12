@@ -1,5 +1,5 @@
 <script setup>
-import { ref, nextTick, onMounted } from "vue";
+import { onMounted, ref, nextTick } from "vue";
 import { useRouter } from "vue-router";
 
 import Navbar from "./components/Navbar.vue";
@@ -7,11 +7,12 @@ import Footer from "./components/Footer.vue";
 import GoTop from "./components/GoTop.vue";
 import PageLoader from "./components/PageLoader.vue";
 import ScrollProgress from "./components/ScrollProgress.vue";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import { initgsap } from "@/js/gsap.js";
 import { initSmoothScroll } from "@/js/smoothScroll";
 
-const loading = ref(false);
+const loading = ref(true);
 const router = useRouter();
 
 const scrollY = ref(0);
@@ -21,28 +22,31 @@ const updateScroll = () => {
 };
 
 onMounted(() => {
-  window.addEventListener("scroll", updateScroll, { passive: true });
-  updateScroll();
+  setTimeout(() => {
+    loading.value = false;
+  }, 600);
 });
 
 /**
  * LOADER SU CAMBIO PAGINA
  */
-router.beforeEach((to, from, next) => {
+router.beforeEach(() => {
   loading.value = true;
-  next();
 });
 
 router.afterEach(async () => {
-  loading.value = false;
-
   await nextTick();
 
-  requestAnimationFrame(() => {
+  setTimeout(() => {
+    loading.value = false;
+
     requestAnimationFrame(() => {
-      initgsap();
+      requestAnimationFrame(() => {
+        initgsap();
+        ScrollTrigger.refresh();
+      });
     });
-  });
+  }, 500);
 });
 
 /**
