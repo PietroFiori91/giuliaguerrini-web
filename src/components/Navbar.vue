@@ -29,7 +29,11 @@
       </nav>
 
       <!-- MOBILE BUTTON -->
-      <button class="burger" @click="menuOpen = !menuOpen">
+      <button
+        class="burger"
+        :class="{ open: menuOpen }"
+        @click="menuOpen = !menuOpen"
+      >
         <span :class="{ active: menuOpen }"></span>
         <span :class="{ active: menuOpen }"></span>
       </button>
@@ -66,12 +70,19 @@ const route = useRoute();
 const menuOpen = ref(false);
 
 watch(menuOpen, (open) => {
+  const html = document.documentElement;
+  const body = document.body;
+
   if (open) {
-    document.body.style.overflow = "hidden";
-    document.body.style.touchAction = "none";
+    html.style.overflow = "hidden";
+    body.style.overflow = "hidden";
+    body.style.touchAction = "none";
+    body.style.height = "100vh";
   } else {
-    document.body.style.overflow = "";
-    document.body.style.touchAction = "";
+    html.style.overflow = "";
+    body.style.overflow = "";
+    body.style.touchAction = "";
+    body.style.height = "";
   }
 });
 
@@ -172,7 +183,6 @@ MOBILE FIRST
   display: none;
 }
 
-/* BURGER */
 .burger {
   display: block;
   width: 36px;
@@ -181,7 +191,7 @@ MOBILE FIRST
   border: none;
   padding: 0;
   position: relative;
-  z-index: 2001; /* sopra overlay */
+  z-index: 2001;
 }
 
 .burger span {
@@ -189,10 +199,12 @@ MOBILE FIRST
   left: 0;
   width: 100%;
   height: 2px;
-  background: #5e7468;
+
+  background: var(--primary);
   transition: all 0.3s ease;
 }
 
+/* posizione base */
 .burger span:first-child {
   top: 8px;
 }
@@ -201,19 +213,22 @@ MOBILE FIRST
   bottom: 8px;
 }
 
-/* X quando aperto */
-.burger span.active {
-  background: #ffffff;
+/* OPEN */
+.burger.open span {
+  background: var(--white);
 }
 
-.burger span.active:first-child {
-  top: 13px;
-  transform: rotate(45deg);
+/* X stabile e visibile */
+.burger.open span:first-child {
+  transform: translateY(6px) rotate(45deg);
 }
 
-.burger span.active:last-child {
-  bottom: 13px;
-  transform: rotate(-45deg);
+.burger.open span:last-child {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+.burger.open {
+  z-index: 99999;
 }
 
 /* MOBILE OVERLAY */
@@ -239,7 +254,7 @@ MOBILE FIRST
 }
 
 .mobile-menu a {
-  color: #ffffff;
+  color: var(--white);
   text-decoration: none;
   font-size: 32px;
   font-weight: 300;
@@ -250,7 +265,7 @@ MOBILE FIRST
 .nav-link {
   position: relative;
   text-decoration: none;
-  color: #5e7468;
+  color: var(--text);
   padding: 6px 0;
 }
 
@@ -262,7 +277,7 @@ MOBILE FIRST
 
   width: 100%;
   height: 1px;
-  background: #5e7468;
+  background: var(--text);
 
   transform: scaleX(0);
   transition: 0.3s ease;
