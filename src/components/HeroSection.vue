@@ -4,10 +4,6 @@
       <img src="../assets/images/hero-cloud.png" alt="nuvola bianca" />
     </div>
 
-    <div class="hero-sun">
-      <img src="../assets/images/sun.png" alt="sole giallo" />
-    </div>
-
     <div class="container">
       <div class="row">
         <div class="col-12 text-center">
@@ -36,6 +32,19 @@
     </div>
   </section>
 </template>
+
+<script setup>
+import { onMounted, onBeforeUnmount } from "vue";
+
+onMounted(() => {
+  // Hero ora non ha più logica JS attiva
+  // (eventualmente qui in futuro GSAP / reveal / ecc.)
+});
+
+onBeforeUnmount(() => {
+  // cleanup non necessario
+});
+</script>
 
 <style scoped>
 .hero {
@@ -67,21 +76,6 @@
   object-position: top center;
 
   opacity: 0.9;
-}
-
-.hero-sun {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  pointer-events: none;
-  filter: blur(0.5px);
-}
-
-.hero-sun img {
-  width: 180px;
-  opacity: 0.85;
 }
 
 .hero .container {

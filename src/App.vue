@@ -8,6 +8,7 @@ import GoTop from "./components/GoTop.vue";
 import PageLoader from "./components/PageLoader.vue";
 import ScrollProgress from "./components/ScrollProgress.vue";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import FloatingSun from "./components/FloatingSun.vue";
 
 import { initgsap } from "@/js/gsap.js";
 import { initSmoothScroll } from "@/js/smoothScroll";
@@ -58,6 +59,8 @@ onMounted(() => {
 </script>
 
 <template>
+  <FloatingSun />
+
   <PageLoader v-if="loading" />
 
   <ScrollProgress />
