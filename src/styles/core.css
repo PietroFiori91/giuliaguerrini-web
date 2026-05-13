@@ -12,9 +12,10 @@ FONT FACE
   font-display: swap;
 }
 
-/* ==============================
-  ROOT (DESIGN SYSTEM)
-============================== */
+/* ==================================================
+ROOT / DESIGN SYSTEM
+================================================== */
+
 :root {
   /* COLORS */
   --bg: #f7f3ea;
@@ -22,27 +23,38 @@ FONT FACE
   --secondary: #dfe4da;
   --white: #ffffff;
   --text: #5e7468;
+  --text-dark: #27312d;
 
+  /* FONT */
   --font-main: "ClashDisplay", sans-serif;
 
-  --text-xs: 0.75rem;
-  --text-sm: 0.9rem;
-  --text-md: 1rem;
-  --text-lg: 1.125rem;
-  --text-xl: 1.35rem;
+  /* BODY TEXT (ancora più grande) */
+  --text-xs: 0.9rem;
+  --text-sm: 1rem;
+  --text-md: 1.18rem;
+  --text-lg: 1.35rem;
+  --text-xl: 1.55rem;
 
-  --h5: 1rem;
-  --h4: 1.25rem;
-  --h3: 1.6rem;
-  --h2: 2rem;
-  --h1: 2.6rem;
-  --hero: 3rem;
+  /* HEADINGS */
+  --h5: 1.18rem;
+  --h4: 1.45rem;
+  --h3: 1.95rem;
+  --h2: 2.55rem;
+  --h1: 3.35rem;
+
+  /* HERO */
+  --hero: 4rem;
+
+  --radius-btn: 32px;
 }
 
-/* ==============================
-  RESET
-============================== */
-* {
+/* ==================================================
+RESET
+================================================== */
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -58,13 +70,17 @@ body {
   background: var(--bg);
   color: var(--text);
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.6;
+  letter-spacing: -0.01em;
   overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* ==============================
-  ELEMENT BASE
-============================== */
+/* ==================================================
+BASE ELEMENTS
+================================================== */
+
 img {
   max-width: 100%;
   display: block;
@@ -75,41 +91,71 @@ a {
   text-decoration: none;
 }
 
-button {
+button,
+input,
+textarea,
+select {
   font-family: inherit;
+}
+
+button {
   cursor: pointer;
 }
 
 /* ==================================================
-TEXT SCALE
+TEXT UTILITIES
 ================================================== */
 
 .text-xs {
   font-size: var(--text-xs);
 }
+
 .text-sm {
   font-size: var(--text-sm);
 }
+
 .text-md {
   font-size: var(--text-md);
 }
+
 .text-lg {
   font-size: var(--text-lg);
 }
+
 .text-xl {
   font-size: var(--text-xl);
 }
 
 /* ==================================================
-HEADINGS
+TYPOGRAPHY
 ================================================== */
 
 p {
   font-size: var(--text-md);
+  line-height: 1.65;
 }
 
+h1,
+h2,
+h3,
+h4,
 h5 {
-  font-size: var(--h5);
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+}
+
+h1 {
+  font-size: var(--h1);
+  font-weight: 600;
+}
+
+h2 {
+  font-size: var(--h2);
+  font-weight: 550;
+}
+
+h3 {
+  font-size: var(--h3);
   font-weight: 500;
 }
 
@@ -118,48 +164,77 @@ h4 {
   font-weight: 500;
 }
 
-h3 {
-  font-size: var(--h3);
+h5 {
+  font-size: var(--h5);
   font-weight: 500;
 }
 
-h2 {
-  font-size: var(--h2);
-  font-weight: 500;
+/* ==================================================
+CURSORE
+================================================== */
+#cursor-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 99999;
 }
 
-h1 {
-  font-size: var(--h1);
-  font-weight: 600;
-  line-height: 1.05;
-}
+.cursor-learn {
+  position: absolute;
+  top: 0;
+  left: 0;
 
-/* ==============================
-  BUTTON BASE
-============================== */
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #27312d;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 11px;
+  letter-spacing: 0.12em;
+
+  transform: translate(-50%, -50%) scale(0);
+  will-change: transform;
+}
+/* ==================================================
+BUTTON
+================================================== */
+
 .btn {
   background: var(--primary);
   color: var(--white);
   border: none;
-  padding: 12px 26px;
-  border-radius: 30px;
-  transition: 0.3s;
+  padding: 14px 30px;
+  border-radius: var(--radius-btn);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
 }
 
 .btn:hover {
-  opacity: 0.85;
+  transform: translateY(-2px);
+  opacity: 0.92;
 }
 
-/* ==============================
-  LAYOUT HELPERS (MINIMALI)
-============================== */
+/* ==================================================
+HELPERS
+================================================== */
+
 .text-center {
   text-align: center;
 }
-
-/* ==============================
-  TEXT WEIGHTS
-============================== */
+.text-start {
+  text-align: start;
+}
+.text-end {
+  text-align: end;
+}
 
 .text-black {
   font-weight: 900 !important;
@@ -173,6 +248,10 @@ h1 {
   font-weight: 600 !important;
 }
 
+.text-medium {
+  font-weight: 500 !important;
+}
+
 .text-regular {
   font-weight: 400 !important;
 }
@@ -181,13 +260,13 @@ h1 {
   font-weight: 300 !important;
 }
 
-/* GSAP */
+/* ==================================================
+GSAP
+================================================== */
 
 .reveal-section {
   will-change: transform, opacity;
 }
-
-/* hword stagger */
 
 .word-wrap {
   display: inline-block;
@@ -197,63 +276,71 @@ h1 {
 
 .word {
   display: inline-block;
-  will-change: transform, opacity;
 }
 
-/* ==============================
-  XS (mobile)
-============================== */
+/* ==================================================
+RESPONSIVE
+================================================== */
+
+/* MOBILE */
 @media (max-width: 576px) {
   :root {
-    --hero: 3.5rem;
-    --h1: 3rem;
-    --h2: 2.3rem;
+    --text-md: 1.08rem;
+    --text-lg: 1.2rem;
+
+    --h3: 1.7rem;
+    --h2: 2.2rem;
+    --h1: 2.9rem;
+
+    --hero: 3.7rem;
   }
 }
 
-/* ==============================
-  MD (tablet)
-============================== */
-@media (max-width: 768px) {
+/* TABLET */
+@media (min-width: 577px) and (max-width: 768px) {
   :root {
-    --hero: 4.2rem;
-    --h1: 3.6rem;
-    --h2: 2.6rem;
-    --h3: 1.8rem;
+    --hero: 4.7rem;
+    --h1: 3.9rem;
+    --h2: 2.8rem;
+    --h3: 1.9rem;
   }
 }
 
-/* ==============================
-  LG (small desktop)
-============================== */
-@media (max-width: 992px) {
+/* SMALL DESKTOP */
+@media (min-width: 769px) and (max-width: 992px) {
   :root {
-    --hero: 5rem;
-    --h1: 4.2rem;
-    --h2: 3rem;
+    --hero: 5.5rem;
+    --h1: 4.5rem;
+    --h2: 3.1rem;
     --h3: 2rem;
-    --text-md: 1.05rem;
   }
 }
 
-/* ==============================
-  XL (desktop large)
-============================== */
-@media (max-width: 1200px) {
+/* DESKTOP */
+@media (min-width: 993px) and (max-width: 1200px) {
   :root {
-    --hero: 6rem;
-    --h1: 5rem;
-    --h2: 3.4rem;
+    --hero: 6.4rem;
+    --h1: 5.3rem;
+    --h2: 3.6rem;
   }
 }
 
-/* ==============================
-  XXL (wide screens)
-============================== */
-@media (min-width: 1440px) {
+/* LARGE */
+@media (min-width: 1201px) and (max-width: 1439px) {
   :root {
     --hero: 7rem;
-    --h1: 5.8rem;
-    --h2: 3.8rem;
+    --h1: 5.9rem;
+    --h2: 4rem;
+  }
+}
+
+/* XL */
+@media (min-width: 1440px) {
+  :root {
+    --hero: 7.8rem;
+    --h1: 6.6rem;
+    --h2: 4.4rem;
+    --h3: 2.3rem;
+    --text-md: 1.22rem;
   }
 }

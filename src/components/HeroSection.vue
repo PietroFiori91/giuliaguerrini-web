@@ -11,7 +11,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12 text-center">
-          <p class="h2-hero mb-3">dottoressa</p>
+          <p class="h2-hero line-0 mb-3">dottoressa</p>
 
           <h1 class="h1-hero">
             <span class="line hero-line line-1">Giulia</span>
@@ -26,7 +26,7 @@
             />
           </div>
 
-          <p class="hero-desc text-regular text-md mb-5">
+          <p class="hero-desc text-medium mb-5">
             Psicoterapeuta ad orientamento psicoanalitico e docente di Yoga.
           </p>
 
@@ -99,7 +99,7 @@
 
 .h2-hero {
   font-size: var(--h3);
-  font-weight: 400;
+  font-weight: 300;
   line-height: 0.95;
   letter-spacing: -0.03em;
 }

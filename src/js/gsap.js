@@ -19,11 +19,21 @@ export const initgsap = () => {
     });
 
     tlHero
-      .from(".line-1", {
+      .from(".line-0", {
         y: 70,
         opacity: 0,
-        duration: 1.1,
+        duration: 0.8,
       })
+
+      .from(
+        ".line-1",
+        {
+          y: 70,
+          opacity: 0,
+          duration: 1.1,
+        },
+        "-=0.9",
+      )
 
       .from(
         ".line-2",

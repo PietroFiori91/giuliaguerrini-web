@@ -1,32 +1,73 @@
 <template>
-  <section id="blog" style="background: #dfe4da" class="reveal-section">
+  <section id="blog" class="blog-section reveal-section">
     <div class="container">
-      <div class="row">
-        <div class="col-12 text-center">
-          <h2 class="stagger-text">Brevi letture</h2>
-          <p class="stagger-text">Ultimi articoli</p>
+      <!-- HEADER -->
+      <div class="row mb-5">
+        <div class="col-6">
+          <h3 class="stagger-text">Brevi letture</h3>
+        </div>
+
+        <div class="col-6 text-end">
+          <p class="stagger-text text-medium">
+            Una selezione dei miei ultimi articoli
+          </p>
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-12 blog-item" v-for="n in 4" :key="n">
-          <div>
-            <h3 class="stagger-text">Titolo</h3>
-            <p class="stagger-text">Sottotitolo articolo</p>
-          </div>
-
-          <span class="stagger-text">/0{{ n }}</span>
+      <!-- LIST -->
+      <router-link v-for="n in 4" :key="n" to="/blog" class="blog-item">
+        <div class="left">
+          <h2 class="title">Titolo articolo</h2>
+          <p class="subtitle">Sottotitolo articolo</p>
         </div>
-      </div>
+
+        <span class="index">/0{{ n }}</span>
+      </router-link>
     </div>
   </section>
 </template>
 
+<script setup></script>
+
 <style scoped>
+.blog-section {
+  background: #dfe4da;
+  padding: 100px 0;
+}
+
 .blog-item {
   display: flex;
   justify-content: space-between;
-  padding: 20px 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  align-items: center;
+
+  padding: 28px 0;
+  border-top: 1px solid rgba(39, 49, 45, 0.2);
+
+  text-decoration: none;
+  color: #27312d;
+
+  cursor: none;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.subtitle {
+  opacity: 0.7;
+}
+
+.index {
+  transition: transform 0.4s ease;
+}
+
+.blog-item:hover .subtitle {
+  opacity: 0.35;
+}
+
+.blog-item:hover .index {
+  transform: translateX(-10px);
 }
 </style>

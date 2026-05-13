@@ -3,19 +3,26 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-6">
-          <h2 class="stagger-text">Chi sono</h2>
+          <h3 class="stagger-text mb-5">Chi sono</h3>
 
-          <p class="stagger-text">
-            Sono Giulia Guerrini, psicologa clinica e psicoterapeuta.
+          <p class="stagger-text mb-4">
+            Sono Giulia Guerrini, psicologa clinica e psicoterapeuta ad
+            orientamento psicoanalitico relazionale e del Sé a Milano.
+          </p>
+          <p class="stagger-text mb-4">
+            Pratico e sono docente di yoga. Su richiesta integro alla clinica
+            tecniche di rilassamento e respirazione in un approccio che
+            considera la persona nella sua totalità.
           </p>
           <p class="stagger-text">
-            Integro clinica e yoga in un percorso olistico.
+            Accompagno le persone in percorsi di cura e crescita personale,
+            lavorando su difficoltà emotive, relazionali e momenti di
+            cambiamento o situazioni stressogene.
           </p>
-          <p class="stagger-text">Accompagno verso equilibrio e cambiamento.</p>
         </div>
 
         <div class="col-6 text-center">
-          <div class="icon">
+          <div class="icon parallax">
             <img
               class="mx-auto"
               src="../assets/images/yoga-draw.png"
