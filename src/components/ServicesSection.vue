@@ -28,7 +28,9 @@
                 <button class="accordion-head" @click="toggle(index)">
                   <div class="title-wrap">
                     <span class="dot"></span>
-                    <span class="text-medium">{{ item.title }}</span>
+                    <span class="text-medium stagger-text">{{
+                      item.title
+                    }}</span>
                   </div>
 
                   <span class="icon">
@@ -37,7 +39,10 @@
                 </button>
 
                 <transition name="accordion">
-                  <div v-if="openIndex === index" class="accordion-body">
+                  <div
+                    v-if="openIndex === index"
+                    class="accordion-body stagger-text"
+                  >
                     <p>
                       {{ item.text }}
                     </p>

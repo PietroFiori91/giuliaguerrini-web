@@ -1,8 +1,8 @@
 <template>
   <section id="about" class="reveal-section parallax about">
     <div class="container">
-      <div class="row align-items-center">
-        <div class="col-6">
+      <div class="row justify-content-center align-items-center gy-5">
+        <div class="col-10 col-lg-6">
           <h3 class="stagger-text mb-5">Chi sono</h3>
 
           <p class="stagger-text mb-4">
@@ -21,8 +21,8 @@
           </p>
         </div>
 
-        <div class="col-6 text-center">
-          <div class="icon parallax">
+        <div class="col-10 col-lg-6 text-center">
+          <div class="icon reveal-section">
             <img
               class="mx-auto"
               src="../assets/images/yoga-draw.png"

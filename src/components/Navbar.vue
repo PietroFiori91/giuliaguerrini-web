@@ -57,13 +57,24 @@
 </template>
 
 <script setup>
-import { ref, nextTick, onMounted, onBeforeUnmount } from "vue";
+import { ref, nextTick, onMounted, onBeforeUnmount, watch } from "vue";
 import { useRouter, useRoute } from "vue-router";
 
 const router = useRouter();
 const route = useRoute();
 
 const menuOpen = ref(false);
+
+watch(menuOpen, (open) => {
+  if (open) {
+    document.body.style.overflow = "hidden";
+    document.body.style.touchAction = "none";
+  } else {
+    document.body.style.overflow = "";
+    document.body.style.touchAction = "";
+  }
+});
+
 const isHidden = ref(false);
 
 let lastScrollY = 0;
@@ -138,8 +149,6 @@ onBeforeUnmount(() => {
   position: sticky;
   top: 0;
   z-index: 999;
-  background: var(--bg);
-  backdrop-filter: blur(10px);
   background: transparent;
   transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: transform;
@@ -155,12 +164,89 @@ onBeforeUnmount(() => {
   align-items: center;
 }
 
-/* DESKTOP */
+/* =========================
+MOBILE FIRST
+========================= */
+
 .desktop-nav {
-  display: flex;
-  gap: 28px;
+  display: none;
 }
 
+/* BURGER */
+.burger {
+  display: block;
+  width: 36px;
+  height: 28px;
+  background: none;
+  border: none;
+  padding: 0;
+  position: relative;
+  z-index: 2001; /* sopra overlay */
+}
+
+.burger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #5e7468;
+  transition: all 0.3s ease;
+}
+
+.burger span:first-child {
+  top: 8px;
+}
+
+.burger span:last-child {
+  bottom: 8px;
+}
+
+/* X quando aperto */
+.burger span.active {
+  background: #ffffff;
+}
+
+.burger span.active:first-child {
+  top: 13px;
+  transform: rotate(45deg);
+}
+
+.burger span.active:last-child {
+  bottom: 13px;
+  transform: rotate(-45deg);
+}
+
+/* MOBILE OVERLAY */
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+
+  width: 100vw;
+  height: 100dvh;
+
+  background: var(--primary);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 34px;
+
+  z-index: 9999;
+
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+.mobile-menu a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 32px;
+  font-weight: 300;
+  text-transform: lowercase;
+}
+
+/* DESKTOP LINK */
 .nav-link {
   position: relative;
   text-decoration: none;
@@ -187,66 +273,6 @@ onBeforeUnmount(() => {
   transform: scaleX(1);
 }
 
-/* BURGER */
-.burger {
-  display: none;
-  width: 36px;
-  height: 28px;
-  background: none;
-  border: none;
-  position: relative;
-  z-index: 1001;
-}
-
-.burger span {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: #5e7468;
-  transition: 0.3s ease;
-}
-
-.burger span:first-child {
-  top: 8px;
-}
-
-.burger span:last-child {
-  bottom: 8px;
-}
-
-.burger span.active:first-child {
-  transform: rotate(45deg);
-  top: 13px;
-}
-
-.burger span.active:last-child {
-  transform: rotate(-45deg);
-  bottom: 13px;
-}
-
-/* MOBILE MENU */
-.mobile-menu {
-  position: fixed;
-  inset: 0;
-  background: #5e7468;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-
-  z-index: 1000;
-}
-
-.mobile-menu a {
-  color: white;
-  text-decoration: none;
-  font-size: 32px;
-  font-weight: 300;
-  text-transform: lowercase;
-}
-
 /* ANIMATION */
 .menu-fade-enter-active,
 .menu-fade-leave-active {
@@ -258,14 +284,21 @@ onBeforeUnmount(() => {
   opacity: 0;
 }
 
-/* MOBILE */
-@media (max-width: 992px) {
+/* =========================
+DESKTOP ≥ 992
+========================= */
+@media (min-width: 992px) {
+  .navbar-custom {
+    backdrop-filter: blur(10px);
+  }
+
   .desktop-nav {
-    display: none;
+    display: flex;
+    gap: 28px;
   }
 
   .burger {
-    display: block;
+    display: none;
   }
 }
 </style>

@@ -49,24 +49,23 @@
 
 .hero-clouds {
   position: absolute;
+  inset: 0;
+  top: -200px;
 
-  top: -800px;
-  left: 0;
   width: 100%;
-  height: 130%;
+  height: calc(100% + 180px);
 
   z-index: 0;
   pointer-events: none;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .hero-clouds img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: top center;
 
-  transform: scale(0.85);
-  transform-origin: center;
   opacity: 0.9;
 }
 
@@ -111,5 +110,49 @@
 
 .line {
   display: block;
+}
+
+@media (min-width: 576px) {
+  .hero-clouds {
+    top: -200px;
+    height: calc(100% + 260px);
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-clouds {
+    top: -300px;
+    height: calc(100% + 260px);
+  }
+}
+
+@media (min-width: 992px) {
+  .hero-clouds {
+    top: -400px;
+    height: calc(100% + 340px);
+  }
+
+  .hero-clouds img {
+    transform: scale(1.03);
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero-clouds {
+    top: -500px;
+    height: calc(100% + 400px);
+  }
+}
+@media (min-width: 1400px) {
+  .hero-clouds {
+    top: -600px;
+    height: calc(100% + 400px);
+  }
+}
+@media (min-width: 1600px) {
+  .hero-clouds {
+    top: -700px;
+    height: calc(100% + 400px);
+  }
 }
 </style>

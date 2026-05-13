@@ -67,7 +67,7 @@ onUnmounted(() => {
   align-items: center;
   justify-content: center;
 
-  z-index: 9999;
+  z-index: 999;
 
   transition: bottom 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
 }

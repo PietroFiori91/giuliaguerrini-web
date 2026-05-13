@@ -1,5 +1,5 @@
 <template>
-  <section class="reveal-section parallax">
+  <section class="reveal-section">
     <section class="banner"></section>
   </section>
 </template>
