@@ -55,7 +55,7 @@ onMounted(async () => {
 <style scoped>
 .hero {
   position: relative;
-  height: 95vh;
+  height: 85vh;
   display: flex;
   align-items: center;
   background: #f7f3ea;

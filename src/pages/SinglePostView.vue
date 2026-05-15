@@ -1,49 +1,55 @@
+<script setup>
+import { ref, onMounted } from "vue";
+import { useRoute } from "vue-router";
+import { client } from "@/sanity/client";
+import { PortableText } from "@portabletext/vue";
+
+const route = useRoute();
+const post = ref(null);
+
+onMounted(async () => {
+  post.value = await client.fetch(
+    `
+    *[_type == "post" && slug.current == $slug][0]{
+      title,
+      publishedAt,
+      body,
+      mainImage{
+        asset->{url}
+      },
+      categories[]->{title}
+    }
+  `,
+    {
+      slug: route.params.slug,
+    },
+  );
+});
+</script>
+
 <template>
-  <section class="single-post">
+  <section class="single-post" v-if="post">
     <div class="container">
-      <div class="row">
-        <div class="hero-post">
-          <p class="meta">{{ post.category }} • {{ post.date }}</p>
+      <div class="hero-post">
+        <p class="meta">
+          {{ post.categories?.[0]?.title }} • {{ post.publishedAt }}
+        </p>
 
-          <h1 class="title">
-            {{ post.title }}
-          </h1>
-        </div>
-
-        <div class="cover-wrap">
-          <img :src="post.image" :alt="post.title" />
-        </div>
-
-        <article class="content">
-          <p v-for="(p, i) in post.body" :key="i">
-            {{ p }}
-          </p>
-        </article>
+        <h1 class="title">
+          {{ post.title }}
+        </h1>
       </div>
+
+      <div class="cover-wrap" v-if="post.mainImage">
+        <img :src="post.mainImage.asset.url" />
+      </div>
+
+      <article class="content">
+        <PortableText :value="post.body" />
+      </article>
     </div>
   </section>
 </template>
-
-<script setup>
-import { useRoute } from "vue-router";
-
-const route = useRoute();
-
-const posts = [
-  {
-    slug: "equilibrio-cambiamento",
-    title: "Ritrovare equilibrio nei momenti di cambiamento",
-    category: "Benessere",
-    date: "14 Maggio 2026",
-    image: "/src/assets/images/blog-cover-1.png",
-    body: [
-      "Ogni cambiamento apre una soglia interiore. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ogni cambiamento apre una soglia interiore. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ogni cambiamento apre una soglia interiore. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ogni cambiamento apre una soglia interiore. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ogni cambiamento apre una soglia interiore. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    ],
-  },
-];
-
-const post = posts.find((p) => p.slug === route.params.slug);
-</script>
 
 <style scoped>
 .single-post {
@@ -79,20 +85,21 @@ const post = posts.find((p) => p.slug === route.params.slug);
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top;
 }
 
 .content {
-  max-width: 900px;
+  max-width: 760px;
+}
+
+.content p {
+  font-size: var(--text-md);
+  line-height: 1.9;
+  margin-bottom: 28px;
 }
 
 @media (min-width: 992px) {
   .title {
     font-size: 4rem;
-  }
-
-  .single-post {
-    padding: 110px 0;
   }
 }
 </style>
