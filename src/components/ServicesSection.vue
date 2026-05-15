@@ -28,9 +28,7 @@
                 <button class="accordion-head" @click="toggle(index)">
                   <div class="title-wrap">
                     <span class="dot"></span>
-                    <span class="text-medium stagger-text">{{
-                      item.title
-                    }}</span>
+                    <span class="text-md stagger-text">{{ item.title }}</span>
                   </div>
 
                   <span class="icon">
@@ -41,7 +39,7 @@
                 <transition name="accordion">
                   <div
                     v-if="openIndex === index"
-                    class="accordion-body stagger-text"
+                    class="accordion-body stagger-text text-md"
                   >
                     <p>
                       {{ item.text }}
@@ -106,13 +104,16 @@ const toggle = (index) => {
 }
 .services-section {
   padding: 100px 0;
-  background: var(--bg);
 }
 
 .services-card {
   background: #6b817857;
   border-radius: 12px;
   padding: 60px;
+}
+
+.stagger-text {
+  color: var(--text-dark);
 }
 
 .left-content {

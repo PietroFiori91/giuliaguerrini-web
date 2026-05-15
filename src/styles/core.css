@@ -80,6 +80,7 @@ body {
 html,
 body {
   overscroll-behavior: none;
+  overflow-x: hidden;
 }
 
 /* ==================================================
@@ -210,6 +211,9 @@ BUTTON
 ================================================== */
 
 .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   background: var(--primary);
   color: var(--white);
   border: none;
@@ -220,6 +224,14 @@ BUTTON
   transition:
     transform 0.25s ease,
     opacity 0.25s ease;
+}
+
+.btn-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fff;
+  display: inline-block;
 }
 
 .btn:hover {

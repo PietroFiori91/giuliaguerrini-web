@@ -15,7 +15,7 @@ export const initgsap = () => {
 
   gsap.context(() => {
     const tlHero = gsap.timeline({
-      defaults: { ease: "power2.out" }, // meno “energico” di power3
+      defaults: { ease: "power1.out" },
     });
 
     tlHero
@@ -194,12 +194,12 @@ export const initgsap = () => {
       y: 14,
       opacity: 0,
       filter: "blur(2px)",
-      duration: 0.8,
-      stagger: 0.12,
-      ease: "power2.out",
+      duration: 0.6,
+      stagger: 0.06,
+      ease: "power3.out",
       scrollTrigger: {
         trigger: el,
-        start: "top 80%",
+        start: "top 100%",
       },
     });
   });

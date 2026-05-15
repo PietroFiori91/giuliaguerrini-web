@@ -67,6 +67,11 @@ import { useRouter, useRoute } from "vue-router";
 const router = useRouter();
 const route = useRoute();
 
+watch(route, () => {
+  isHidden.value = false;
+  lastScrollY = window.scrollY;
+});
+
 const menuOpen = ref(false);
 
 watch(menuOpen, (open) => {
@@ -130,10 +135,12 @@ const handleScroll = () => {
 
   if (!ticking) {
     window.requestAnimationFrame(() => {
-      if (currentY > 80) {
-        isHidden.value = currentY > lastScrollY;
-      } else {
+      if (currentY <= 80) {
         isHidden.value = false;
+      } else if (currentY < lastScrollY) {
+        isHidden.value = false;
+      } else {
+        isHidden.value = true;
       }
 
       lastScrollY = currentY;
@@ -146,6 +153,8 @@ const handleScroll = () => {
 
 onMounted(() => {
   lastScrollY = window.scrollY;
+  isHidden.value = false;
+
   window.addEventListener("scroll", handleScroll, { passive: true });
 });
 
@@ -156,8 +165,9 @@ onBeforeUnmount(() => {
 
 <style scoped>
 .navbar-custom {
+  width: 100%;
   padding: 18px 32px;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 999;
   background: transparent;

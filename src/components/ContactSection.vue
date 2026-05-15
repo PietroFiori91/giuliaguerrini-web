@@ -36,7 +36,7 @@
           <h3 class="stagger-text text-contacts my-5">
             Ti aspetto per un incontro conoscitivo
           </h3>
-          <button class="btn">Scrivimi →</button>
+          <button class="btn">Scrivimi <span class="btn-dot"></span></button>
         </div>
 
         <div class="col-10 col-lg-4">

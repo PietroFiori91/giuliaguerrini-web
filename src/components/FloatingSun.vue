@@ -78,14 +78,14 @@ onBeforeUnmount(() => {
   height: 180px;
   border-radius: 50%;
 
-  background-color: #ffc62a;
+  background-color: #2a58ff4f;
 
   pointer-events: none;
   z-index: 1;
 
   will-change: transform;
 
-  mix-blend-mode: screen;
+  mix-blend-mode: difference;
   filter: blur(1px) brightness(1.1);
   opacity: 0.9;
 }

@@ -1,46 +1,126 @@
 <template>
-  <footer class="footer-custom">
-    <div class="container footer-wrap">
-      <p>© 2026 Giulia Guerrini</p>
-
-      <div class="footer-links">
-        <a href="#">Privacy</a>
-        <a href="#">Cookie</a>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <!-- IDENTITY -->
+      <div class="footer-block">
+        <h3 class="footer-title">Dott.ssa Giulia Guerrini</h3>
+        <p class="footer-text">
+          Psicoterapeuta ad orientamento psicoanalitico<br />
+          Docente di Yoga
+        </p>
       </div>
+
+      <!-- CONTACTS -->
+      <div class="footer-block">
+        <h4 class="footer-subtitle">Contatti</h4>
+        <a href="mailto:info@tuosito.it">info@tuosito.it</a><br />
+        <a href="tel:+390000000000">+39 000 000 000</a><br />
+        <span>Milano, Italia</span>
+      </div>
+
+      <!-- NAV -->
+      <div class="footer-block">
+        <h4 class="footer-subtitle">Navigazione</h4>
+        <router-link to="/">Home</router-link><br />
+        <router-link to="/blog">Blog</router-link><br />
+        <a @click.prevent="$emit('scroll', 'contacts')" href="#">Contatti</a>
+      </div>
+
+      <!-- LEGAL -->
+      <div class="footer-block">
+        <h4 class="footer-subtitle">Legale</h4>
+        <router-link to="/privacy">Privacy Policy</router-link><br />
+        <router-link to="/cookie">Cookie Policy</router-link><br />
+        <router-link to="/note-legali">Note Legali</router-link>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© {{ new Date().getFullYear() }} Tutti i diritti riservati</p>
     </div>
   </footer>
 </template>
 
 <style scoped>
-.footer-custom {
-  background: #5e7468;
-  padding: 30px 0;
+.site-footer {
+  background: var(--primary);
+  color: var(--white);
+  padding: 60px 20px 30px;
 }
 
-.footer-wrap {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* MOBILE BASE */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
 }
 
-p,
-a {
-  color: white;
+.footer-title {
+  font-size: var(--text-lg);
+  margin-bottom: 10px;
 }
 
-.footer-links {
-  display: flex;
-  gap: 20px;
+.footer-subtitle {
+  font-size: var(--text-md);
+  margin-bottom: 12px;
+  opacity: 0.9;
 }
 
-a {
+.footer-text,
+.footer-block a,
+.footer-block span {
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.85);
   text-decoration: none;
+  line-height: 1.6;
 }
 
-@media (max-width: 768px) {
-  .footer-wrap {
-    flex-direction: column;
-    gap: 20px;
+.footer-block a {
+  position: relative;
+}
+
+.footer-block a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 1px;
+  background: white;
+  transition: 0.3s ease;
+}
+
+.footer-block a:hover::after {
+  width: 100%;
+}
+
+.footer-bottom {
+  margin-top: 50px;
+  text-align: center;
+  font-size: var(--text-xs);
+  opacity: 0.7;
+}
+
+/* =========================
+TABLET (≥ 768px)
+========================= */
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+/* =========================
+DESKTOP (≥ 992px)
+========================= */
+@media (min-width: 992px) {
+  .footer-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .site-footer {
+    padding: 80px 60px 30px;
   }
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <section id="hero" class="hero reveal-section">
+  <section id="hero" class="hero reveal-section mt-5">
     <div class="hero-clouds">
       <img src="../assets/images/hero-cloud.png" alt="nuvola bianca" />
     </div>
@@ -26,7 +26,9 @@
             Psicoterapeuta ad orientamento psicoanalitico e docente di Yoga.
           </p>
 
-          <button class="btn hero-btn">Scrivimi →</button>
+          <button class="btn hero-btn">
+            Scrivimi <span class="btn-dot"></span>
+          </button>
         </div>
       </div>
     </div>
@@ -36,14 +38,9 @@
 <script setup>
 import { onMounted, onBeforeUnmount } from "vue";
 
-onMounted(() => {
-  // Hero ora non ha più logica JS attiva
-  // (eventualmente qui in futuro GSAP / reveal / ecc.)
-});
+onMounted(() => {});
 
-onBeforeUnmount(() => {
-  // cleanup non necessario
-});
+onBeforeUnmount(() => {});
 </script>
 
 <style scoped>
@@ -66,7 +63,8 @@ onBeforeUnmount(() => {
 
   z-index: 0;
   pointer-events: none;
-  overflow: visible;
+
+  overflow: hidden;
 }
 
 .hero-clouds img {
