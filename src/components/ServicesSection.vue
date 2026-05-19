@@ -6,7 +6,7 @@
           <!-- LEFT -->
           <div class="col-lg-6">
             <div class="left-content">
-              <h3 class="h2-services stagger-text mb-4">A chi mi rivolgo</h3>
+              <h3 class="h2-services stagger-text mb-4">Di cosa mi occupo</h3>
 
               <p class="stagger-text intro-text">
                 Un percorso di benessere è per chi sente il bisogno di fermarsi,
@@ -63,20 +63,20 @@ const openIndex = ref(0);
 
 const items = [
   {
-    title: "Sovraccarico",
-    text: "Quando tutto pesa troppo e senti il bisogno di ritrovare respiro, calma e centratura.",
+    title: "Sostegno psicologico",
+    text: "Percorsi di supporto e orientamento rivolti a chi sta attraversando momenti di difficoltà, cambiamento o stress emotivo. Lavoro su ansia, gestione dello stress, difficoltà relazionali econsapevolezza di sé, aiutando la persona a ritrovare risorse interne, equilibrio e nuove modalità per affrontare le sfide della vita.",
   },
   {
-    title: "Cambiamento",
-    text: "Nei momenti di transizione personale, lavorativa o affettiva che richiedono nuove risorse.",
+    title: "Psicoterapia",
+    text: "Percorsi di psicoterapia ad orientamento psicoanalitico relazionale e del Sé, rivolti ad adolescenti e adulti. Mi occupo di sofferenza emotiva, disturbi psicosomatici, problematiche legate all’immagine corporea, disturbi alimentari, difficoltà relazionali e della sessualità, depressione, difficoltà nella genitorialità, traumi e dipendenze. Il lavoro terapeutico mira a comprendere le radici profonde del disagio e i meccanismi emotivi che mantengono la sofferenza, favorendo una trasformazione autentica e duratura.",
   },
   {
-    title: "Ricerca di sé",
-    text: "Per chi desidera conoscersi meglio, comprendere i propri schemi e crescere interiormente.",
+    title: "Yoga e lavoro mente-corpo",
+    text: "Integro, quando utile, pratiche di respirazione, meditazione e tecniche derivanti dall’Hatha Yoga tradizionale orientati al riequilibrio psicofisico, alla presenza mentale e alla costruzione di una connessione più consapevole e armonica con il proprio corpo.",
   },
   {
-    title: "Equilibrio",
-    text: "Quando mente e corpo chiedono ascolto e desideri una nuova armonia quotidiana.",
+    title: "Classi Yoga",
+    text: "Secondo il metodo Pranavashya, che studio e pratico anche in India, sotto la guida del mio maestro Yogacharya Vinay kumar, una pratica derivante dall’Hatha in cui ogni movimento è guidato dal ritmo del respiro. Propongo percorsi individuali e classi di gruppo, in presenza e online.",
   },
 ];
 
@@ -185,7 +185,7 @@ const toggle = (index) => {
 .accordion-body {
   height: 110px;
   padding: 12px 0 0 30px;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .accordion-body p {

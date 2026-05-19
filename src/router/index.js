@@ -17,6 +17,18 @@ const routes = [
     path: "/blog/:slug",
     component: () => import("@/pages/SinglePostView.vue"),
   },
+  {
+    path: "/privacy",
+    component: () => import("@/pages/Privacy.vue"),
+  },
+  {
+    path: "/cookie",
+    component: () => import("@/pages/Cookie.vue"),
+  },
+  {
+    path: "/note-legali",
+    component: () => import("@/pages/Legal.vue"),
+  },
 ];
 
 const router = createRouter({

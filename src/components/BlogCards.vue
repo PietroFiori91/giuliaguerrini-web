@@ -59,6 +59,8 @@ onMounted(async () => {
   // opzionale: solo ultimi 4
   posts.value = posts.value.slice(0, 4);
 });
+
+console.log(posts.value);
 </script>
 
 <style scoped>

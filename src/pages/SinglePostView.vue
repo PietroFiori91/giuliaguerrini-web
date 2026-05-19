@@ -1,13 +1,14 @@
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref, onMounted, watch } from "vue";
 import { useRoute } from "vue-router";
 import { client } from "@/sanity/client";
 import { PortableText } from "@portabletext/vue";
+import { useSeo } from "@/composables/useSeo";
 
 const route = useRoute();
 const post = ref(null);
 
-onMounted(async () => {
+const fetchPost = async () => {
   post.value = await client.fetch(
     `
     *[_type == "post" && slug.current == $slug][0]{
@@ -24,7 +25,28 @@ onMounted(async () => {
       slug: route.params.slug,
     },
   );
-});
+
+  if (post.value) {
+    useSeo({
+      title: post.value.title,
+      description: post.value.excerpt || "Articolo dal blog di Giulia Guerrini",
+      image: post.value.mainImage?.asset?.url,
+      url: `https://tuodominio.it/blog/${route.params.slug}`,
+    });
+  }
+};
+
+onMounted(fetchPost);
+
+/**
+ * se cambi slug senza reload (SPA navigation)
+ */
+watch(
+  () => route.params.slug,
+  () => {
+    fetchPost();
+  },
+);
 </script>
 
 <template>

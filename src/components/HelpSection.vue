@@ -4,7 +4,7 @@
       <!-- TITLE -->
       <div class="row">
         <div class="col-12 mb-5">
-          <h3 class="stagger-text">Posso aiutarti con</h3>
+          <h3 class="stagger-text">Lavoro con con</h3>
         </div>
       </div>
 
@@ -16,7 +16,7 @@
             <img src="../assets/images/help-1.png" alt="" class="help-img" />
 
             <div class="help-content">
-              <h4 class="stagger-text">Gestione stress <br />e dell'ansia</h4>
+              <h4 class="stagger-text">Adulti <br />giovani e bambini</h4>
               <p class="stagger-text">
                 Percorsi personalizzati per ritrovare equilibrio, calma
                 interiore e strumenti concreti per affrontare le difficoltà

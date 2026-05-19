@@ -98,6 +98,14 @@ a {
   text-decoration: none;
 }
 
+html {
+  /* Scrollbar Width: 'auto', 'thin', or 'none' */
+  scrollbar-width: thin;
+
+  /* Scrollbar Color: thumb-color and track-color */
+  scrollbar-color: var(--primary) #6b817857;
+}
+
 button,
 input,
 textarea,
