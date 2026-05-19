@@ -13,8 +13,8 @@
       <!-- CONTACTS -->
       <div class="footer-block">
         <h4 class="footer-subtitle">Contatti</h4>
-        <a href="mailto:info@tuosito.it">info@tuosito.it</a><br />
-        <a href="tel:+390000000000">+39 000 000 000</a><br />
+        <a href="mailto:info@giuliaguerrini.it">info@giuliaguerrini.it</a><br />
+        <a href="tel:+393347858449">+39 334 785 8449</a><br />
         <span>Milano, Italia</span>
       </div>
 
@@ -23,7 +23,6 @@
         <h4 class="footer-subtitle">Navigazione</h4>
         <router-link to="/">Home</router-link><br />
         <router-link to="/blog">Blog</router-link><br />
-        <a @click.prevent="$emit('scroll', 'contacts')" href="#">Contatti</a>
       </div>
 
       <!-- LEGAL -->

@@ -13,7 +13,7 @@ const props = defineProps({
   },
   image: {
     type: String,
-    default: "/og-image.jpg",
+    default: "/og-image.png",
   },
   url: {
     type: String,

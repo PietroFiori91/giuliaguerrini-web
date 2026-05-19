@@ -27,6 +27,7 @@ ROOT / DESIGN SYSTEM
 
   /* FONT */
   --font-main: "ClashDisplay", sans-serif;
+  --font-text: "Poppins", sans-serif;
 
   /* BODY TEXT (ancora più grande) */
   --text-xs: 0.9rem;
@@ -108,6 +109,9 @@ button {
   cursor: pointer;
 }
 
+p {
+  font-family: var(--font-text);
+}
 /* ==================================================
 TEXT UTILITIES
 ================================================== */

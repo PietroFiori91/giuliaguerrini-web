@@ -11,13 +11,17 @@
         <div class="col-10 col-lg-4 text-center">
           <img class="mx-auto mb-5" src="../assets/images/ico-1.png" alt="" />
           <h4 class="stagger-text mb-3">Email</h4>
-          <p class="stagger-text">info@email.com</p>
+          <a href="mailto:info@giuliaguerrini.it"
+            ><p class="stagger-text">info@giuliaguerrini.it</p></a
+          >
         </div>
 
         <div class="col-10 col-lg-4 text-center">
           <img class="mx-auto mb-5" src="../assets/images/ico-2.png" alt="" />
           <h4 class="stagger-text mb-3">Telefono</h4>
-          <p class="stagger-text">+39 000000000</p>
+          <a href="tel:+393347858449"
+            ><p class="stagger-text">+39 334 785 8449</p></a
+          >
         </div>
 
         <div class="col-10 col-lg-4 text-center">
@@ -36,7 +40,9 @@
           <h3 class="stagger-text text-contacts my-5">
             Ti aspetto per un incontro conoscitivo
           </h3>
-          <button class="btn">Scrivimi <span class="btn-dot"></span></button>
+          <a href="mailto:info@giuliaguerrini.it"
+            ><button class="btn">Scrivimi <span class="btn-dot"></span></button
+          ></a>
         </div>
 
         <div class="col-10 col-lg-4">

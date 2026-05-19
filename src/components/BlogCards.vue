@@ -17,50 +17,48 @@
       <!-- LIST -->
       <router-link
         v-for="(post, i) in posts"
-        :key="i"
+        :key="post._id || i"
         to="/blog"
         class="blog-item"
-        :style="{ '--bg': `url(${post.image})` }"
+        :style="{ '--bg': `url(${post.mainImage?.asset?.url})` }"
       >
         <div class="left">
-          <h2 class="title stagger-text">{{ post.title }}</h2>
-          <p class="subtitle stagger-text">{{ post.subtitle }}</p>
+          <h2 class="title stagger-text">
+            {{ post.title }}
+          </h2>
+
+          <p class="subtitle stagger-text">
+            {{ formatDate(post.publishedAt) }}
+          </p>
         </div>
 
-        <span class="index">/0{{ i + 1 }}</span>
+        <span class="index"> /0{{ i + 1 }} </span>
       </router-link>
     </div>
   </section>
 </template>
 
 <script setup>
-import blog1 from "../assets/images/blog-1.png";
-import blog2 from "../assets/images/blog-2.png";
-import blog3 from "../assets/images/blog-3.png";
-import blog4 from "../assets/images/blog-4.png";
+import { ref, onMounted } from "vue";
+import { client } from "@/sanity/client";
+import { POSTS_QUERY } from "@/sanity/queries";
 
-const posts = [
-  {
-    title: "Titolo articolo",
-    subtitle: "Sottotitolo articolo",
-    image: blog1,
-  },
-  {
-    title: "Titolo articolo",
-    subtitle: "Sottotitolo articolo",
-    image: blog2,
-  },
-  {
-    title: "Titolo articolo",
-    subtitle: "Sottotitolo articolo",
-    image: blog3,
-  },
-  {
-    title: "Titolo articolo",
-    subtitle: "Sottotitolo articolo",
-    image: blog4,
-  },
-];
+const posts = ref([]);
+
+const formatDate = (date) => {
+  return new Date(date).toLocaleDateString("it-IT", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  });
+};
+
+onMounted(async () => {
+  posts.value = await client.fetch(POSTS_QUERY);
+
+  // opzionale: solo ultimi 4
+  posts.value = posts.value.slice(0, 4);
+});
 </script>
 
 <style scoped>

@@ -7,7 +7,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12 text-center">
-          <p class="h2-hero line-0 mb-3">dottoressa</p>
+          <h2 class="h2-hero line-0 mb-3">dottoressa</h2>
 
           <h1 class="h1-hero">
             <span class="line hero-line line-1">Giulia</span>
@@ -26,9 +26,9 @@
             Psicoterapeuta ad orientamento psicoanalitico e docente di Yoga.
           </p>
 
-          <button class="btn hero-btn">
-            Scrivimi <span class="btn-dot"></span>
-          </button>
+          <a href="mailto:info@giuliaguerrini.it"
+            ><button class="btn">Scrivimi <span class="btn-dot"></span></button
+          ></a>
         </div>
       </div>
     </div>
