@@ -90,4 +90,10 @@
     height: 400px;
   }
 }
+
+@media (min-width: 1400px) {
+}
+
+@media (min-width: 1600px) {
+}
 </style>
