@@ -55,7 +55,7 @@
 
 <style scoped>
 .doctor {
-  height: 400px;
+  height: 320px;
   background: url("../assets/images/gg-footer.png") center/contain no-repeat;
 }
 .text-contacts {
@@ -63,7 +63,16 @@
   line-height: 0.95;
 }
 
+@media (min-width: 576px) {
+  .doctor {
+    height: 350px;
+  }
+}
+
 @media (min-width: 768px) {
+  .doctor {
+    height: 370px;
+  }
   .text-contacts {
     font-size: 62px;
   }
@@ -73,6 +82,12 @@
   .text-contacts {
     font-size: 80px;
     line-height: 70px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .doctor {
+    height: 400px;
   }
 }
 </style>
