@@ -3,8 +3,8 @@ import { useHead } from "@vueuse/head";
 export function useSeo({
   title,
   description,
-  image = "/og-image.png",
-  url = "https://tuodominio.it",
+  image = ".././assets/images/og-image.png",
+  url = "https://giuliaguerrini.com",
 }) {
   useHead({
     title,

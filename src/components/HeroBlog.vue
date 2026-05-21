@@ -48,7 +48,7 @@ onMounted(async () => {
         stagger: 0.12,
       });
     });
-  }, 650); // sincronizzato col tuo PageLoader (~600ms)
+  }, 650);
 });
 </script>
 
@@ -82,7 +82,7 @@ onMounted(async () => {
 .hero-clouds {
   position: absolute;
   inset: 0;
-  top: -200px;
+  top: -80px;
 
   width: 100%;
   height: calc(100% + 180px);
@@ -103,14 +103,14 @@ onMounted(async () => {
 /* responsive clouds identico home */
 @media (min-width: 576px) {
   .hero-clouds {
-    top: -200px;
+    top: -120px;
     height: calc(100% + 260px);
   }
 }
 
 @media (min-width: 768px) {
   .hero-clouds {
-    top: -300px;
+    top: -180px;
     height: calc(100% + 260px);
   }
 }
