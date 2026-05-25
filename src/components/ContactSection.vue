@@ -38,7 +38,7 @@
       <div class="row align-center mt-5">
         <div class="col-10 col-lg-8">
           <h3 class="stagger-text text-contacts my-5">
-            Ti aspetto per un incontro conoscitivo
+            Contattami per fissare un incontro conoscitivo
           </h3>
           <a href="mailto:info@giuliaguerrini.it"
             ><button class="btn">Scrivimi <span class="btn-dot"></span></button

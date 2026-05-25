@@ -4,7 +4,7 @@
       <!-- TITLE -->
       <div class="row">
         <div class="col-12 mb-5">
-          <h3 class="stagger-text">Lavoro con con</h3>
+          <h3 class="stagger-text">Lavoro con</h3>
         </div>
       </div>
 
@@ -16,11 +16,12 @@
             <img src="../assets/images/help-1.png" alt="" class="help-img" />
 
             <div class="help-content">
-              <h4 class="stagger-text">Adulti <br />giovani e bambini</h4>
+              <h4 class="stagger-text">Sofferenza emotiva <br />e trauma</h4>
               <p class="stagger-text">
-                Percorsi personalizzati per ritrovare equilibrio, calma
-                interiore e strumenti concreti per affrontare le difficoltà
-                quotidiane.
+                ansia, stress e attacchi di panico
+                <br />depressione e stati di umore deflesso <br />traumi e
+                vissuti di blocco o sopraffazione emotiva <br />difficoltà nella
+                regolazione delle emozioni
               </p>
             </div>
           </div>
@@ -32,10 +33,14 @@
             <img src="../assets/images/help-2.png" alt="" class="help-img" />
 
             <div class="help-content">
-              <h4 class="stagger-text">Crescita <br />personale</h4>
+              <h4 class="stagger-text">
+                Relazioni, identità <br />e sessualità
+              </h4>
               <p class="stagger-text">
-                Un lavoro integrato tra psicoterapia e yoga per migliorare la
-                conoscenza di sé, l'autostima e il benessere emotivo.
+                difficoltà relazionali e affettive
+                <br />difficoltà legate all’immagine di sé e all’identità
+                personale <br />disturbi della sfera sessuale e dell’intimità
+                <br />momenti critici del ciclo di vita e fasi di transizione
               </p>
             </div>
           </div>
@@ -47,10 +52,12 @@
             <img src="../assets/images/help-3.png" alt="" class="help-img" />
 
             <div class="help-content">
-              <h4 class="stagger-text">Benessere <br />mente corpo</h4>
+              <h4 class="stagger-text">Corpo, sintomi <br />e comportamenti</h4>
               <p class="stagger-text">
-                Tecniche di respirazione, movimento e ascolto interiore per
-                ristabilire armonia, energia e presenza nel qui e ora.
+                disturbi psicosomatici <br />disturbi del comportamento
+                alimentare e difficoltà con il rapporto col cibo
+                <br />dipendenze e comportamenti compulsivi <br />difficoltà nel
+                rapporto con il corpo
               </p>
             </div>
           </div>

@@ -10,7 +10,7 @@
         >
 
         <a @click.prevent="handleSection('services')" href="#" class="nav-link"
-          >per chi</a
+          >di cosa mi occupo</a
         >
 
         <a @click.prevent="handleSection('help')" href="#" class="nav-link"
@@ -45,7 +45,7 @@
 
           <a @click.prevent="handleSection('about')">about</a>
 
-          <a @click.prevent="handleSection('services')">per chi</a>
+          <a @click.prevent="handleSection('services')">di cosa mi occupo</a>
 
           <a @click.prevent="handleSection('help')">metodo</a>
 

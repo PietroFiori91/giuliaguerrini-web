@@ -9,10 +9,15 @@
               <h3 class="h2-services stagger-text mb-4">Di cosa mi occupo</h3>
 
               <p class="stagger-text intro-text">
-                Un percorso di benessere è per chi sente il bisogno di fermarsi,
-                ascoltarsi e ritrovare equilibrio. Accompagno persone in diverse
-                fasi della vita, offrendo uno spazio sicuro in cui mente e corpo
-                possono tornare in armonia.
+                Accompagno le persone in percorsi di cura e crescita personale,
+                lavorando su ansia, traumi, difficoltà relazionali, disturbi
+                psicosomatici, depressione, disturbi della sfera sessuale,
+                dipendenze, problematiche legate all’immagine di sé e al
+                rapporto con il proprio corpo, disturbi alimentari e problemi
+                evolutivi del ciclo di vita. <br /><br />Su richiesta, integro
+                alla clinica tecniche di respirazione, rilassamento e lavoro
+                mente-corpo per favorire equilibrio psicofisico, presenza,
+                concentrazione e consapevolezza.
               </p>
             </div>
           </div>
@@ -64,19 +69,19 @@ const openIndex = ref(0);
 const items = [
   {
     title: "Sostegno psicologico",
-    text: "Percorsi di supporto e orientamento rivolti a chi sta attraversando momenti di difficoltà, cambiamento o stress emotivo. Lavoro su ansia, gestione dello stress, difficoltà relazionali econsapevolezza di sé, aiutando la persona a ritrovare risorse interne, equilibrio e nuove modalità per affrontare le sfide della vita.",
+    text: "Percorsi di supporto e orientamento rivolti a chi attraversa momenti di vulnerabilità, cambiamento o stress emotivo. Il lavoro psicologico accompagna la persona verso una più profonda consapevolezza di sè e delle proprie dinamiche interiori per aver accesso alle proprie risorse interne durante momenti di cambiamento delicati.",
   },
   {
     title: "Psicoterapia",
-    text: "Percorsi di psicoterapia ad orientamento psicoanalitico relazionale e del Sé, rivolti ad adolescenti e adulti. Mi occupo di sofferenza emotiva, disturbi psicosomatici, problematiche legate all’immagine corporea, disturbi alimentari, difficoltà relazionali e della sessualità, depressione, difficoltà nella genitorialità, traumi e dipendenze. Il lavoro terapeutico mira a comprendere le radici profonde del disagio e i meccanismi emotivi che mantengono la sofferenza, favorendo una trasformazione autentica e duratura.",
+    text: "La psicoterapia rappresenta uno spazio di parola, ascolto e trasformazione, in cui il sintomo e la sofferenza vengono accolti come espressioni di una storia personale e affettiva più profonda. Il percorso terapeutico accompagna la persona verso una maggiore comprensione di sé, delle proprie modalità relazionali e dei vissuti emotivi che attraversano il corpo e la mente. Lavoro con adolescenti e adulti che vivono momenti di sofferenza psicologica, difficoltà relazionali, problematiche legate al corpo e all’alimentazione, stati depressivi, ansia, traumi e dipendenze.",
   },
   {
-    title: "Yoga e lavoro mente-corpo",
-    text: "Integro, quando utile, pratiche di respirazione, meditazione e tecniche derivanti dall’Hatha Yoga tradizionale orientati al riequilibrio psicofisico, alla presenza mentale e alla costruzione di una connessione più consapevole e armonica con il proprio corpo.",
+    title: "Mente-corpo",
+    text: "Su richiesta, il lavoro clinico può essere affiancato da tecniche di respirazione, meditazione e tecniche derivate dallo Yoga tradizionale, come sostegno al processo terapeutico, per sostenere presenza, regolazione emotiva e connessione con sè stessi.",
   },
   {
     title: "Classi Yoga",
-    text: "Secondo il metodo Pranavashya, che studio e pratico anche in India, sotto la guida del mio maestro Yogacharya Vinay kumar, una pratica derivante dall’Hatha in cui ogni movimento è guidato dal ritmo del respiro. Propongo percorsi individuali e classi di gruppo, in presenza e online.",
+    text: "Propongo percorsi individuali e classi di gruppo, in presenza e online, secondo il metodo Prana Vashya e Hatha, metodi tradizionali, in cui ogni movimento è guidato dal ritmo del respiro e orientato allo sviluppo di stabilità, ascolto e consapevolezza.",
   },
 ];
 
