@@ -76,7 +76,7 @@ console.log(posts.value);
   justify-content: space-between;
   align-items: center;
 
-  padding: 28px 0;
+  padding: 28px 12px;
   border-top: 1px solid rgba(39, 49, 45, 0.2);
 
   text-decoration: none;

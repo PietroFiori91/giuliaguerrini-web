@@ -1,5 +1,5 @@
 export const POSTS_QUERY = `
-  *[_type == "post"] | order(publishedAt desc){
+  *[_type == "post"] | order(publishedAt desc)[0...6]{
     title,
     slug,
     publishedAt,
