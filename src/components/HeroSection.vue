@@ -27,7 +27,8 @@
           </p>
 
           <a href="mailto:info@giuliaguerrini.it"
-            ><button class="btn">Scrivimi <span class="btn-dot"></span></button
+            ><button class="btn">
+              Contattami <span class="btn-dot"></span></button
           ></a>
         </div>
       </div>
