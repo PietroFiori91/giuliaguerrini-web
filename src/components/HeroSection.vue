@@ -7,7 +7,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12 text-center">
-          <h2 class="h2-hero line-0 mb-3">dottoressa</h2>
+          <h2 class="h2-hero line-0 mb-3">Dottoressa</h2>
 
           <h1 class="h1-hero">
             <span class="line hero-line line-1">Giulia</span>
