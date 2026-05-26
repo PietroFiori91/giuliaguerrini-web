@@ -36,6 +36,14 @@ const fetchPost = async () => {
   }
 };
 
+const formatDate = (date) => {
+  return new Date(date).toLocaleDateString("it-IT", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  });
+};
+
 onMounted(fetchPost);
 
 /**
@@ -54,7 +62,7 @@ watch(
     <div class="container">
       <div class="hero-post">
         <p class="meta">
-          {{ post.categories?.[0]?.title }} • {{ post.publishedAt }}
+          {{ post.categories?.[0]?.title }} • {{ formatDate(post.publishedAt) }}
         </p>
 
         <h1 class="title">

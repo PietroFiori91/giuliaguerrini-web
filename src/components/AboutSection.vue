@@ -2,14 +2,14 @@
   <section id="about" class="reveal-section parallax about">
     <div class="container">
       <div class="row justify-content-center align-items-center gy-5">
-        <div class="col-10 col-lg-7">
+        <div class="col-10 col-lg-8">
           <h3 class="stagger-text mb-5">Chi sono</h3>
 
           <p class="stagger-text mb-3">
             Sono la <span class="text-bold">Dott.ssa Giulia Guerrini</span>,
             psicologa clinica e psicoterapeuta ad orientamento
             <span class="text-bold">psicoanalitico</span>, iscritta all’Albo
-            degli Psicologi della Lombardia.
+            degli Psicologi della Lombardia - N° 26834.
           </p>
           <p class="stagger-text mb-3">
             Accanto all’attività clinica, sono insegnante e praticante di
@@ -49,7 +49,7 @@
           </p>
         </div>
 
-        <div class="col-10 col-lg-5 text-center">
+        <div class="col-10 col-lg-4 text-center">
           <div class="icon reveal-section">
             <img
               class="mx-auto"
