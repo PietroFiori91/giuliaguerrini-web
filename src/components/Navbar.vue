@@ -14,7 +14,7 @@
         >
 
         <a @click.prevent="handleSection('help')" href="#" class="nav-link"
-          >metodo</a
+          >lavoro con</a
         >
 
         <a @click.prevent="handleSection('blog')" href="#" class="nav-link"
@@ -47,7 +47,7 @@
 
           <a @click.prevent="handleSection('services')">di cosa mi occupo</a>
 
-          <a @click.prevent="handleSection('help')">metodo</a>
+          <a @click.prevent="handleSection('help')">lavoro con</a>
 
           <a @click.prevent="handleSection('blog')">articoli</a>
 
