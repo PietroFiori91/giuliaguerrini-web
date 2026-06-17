@@ -13,7 +13,8 @@
       <!-- CONTACTS -->
       <div class="footer-block">
         <h4 class="footer-subtitle">Contatti</h4>
-        <a href="mailto:info@giuliaguerrini.it">info@giuliaguerrini.it</a><br />
+        <a href="mailto:info@giuliaguerrini.com">info@giuliaguerrini.com</a
+        ><br />
         <a href="tel:+393347858449">+39 334 785 8449</a><br />
         <span>Milano - via Carlo de Cristoforis 2., Italia</span>
       </div>

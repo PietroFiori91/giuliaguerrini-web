@@ -11,8 +11,8 @@
         <div class="col-10 col-lg-4 text-center">
           <img class="mx-auto mb-5" src="../assets/images/ico-1.png" alt="" />
           <h4 class="stagger-text mb-3">Email</h4>
-          <a href="mailto:info@giuliaguerrini.it"
-            ><p class="stagger-text">info@giuliaguerrini.it</p></a
+          <a href="mailto:info@giuliaguerrini.com"
+            ><p class="stagger-text">info@giuliaguerrini.com</p></a
           >
         </div>
 
@@ -40,7 +40,7 @@
           <h3 class="stagger-text text-contacts my-5">
             Contattami per fissare un incontro conoscitivo
           </h3>
-          <a href="mailto:info@giuliaguerrini.it"
+          <a href="mailto:info@giuliaguerrini.com"
             ><button class="btn">
               Contattami <span class="btn-dot"></span></button
           ></a>

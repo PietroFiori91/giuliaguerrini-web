@@ -26,7 +26,7 @@
             Psicoterapeuta ad orientamento psicoanalitico e docente di Yoga.
           </p>
 
-          <a href="mailto:info@giuliaguerrini.it"
+          <a href="mailto:info@giuliaguerrini.com"
             ><button class="btn">
               Contattami <span class="btn-dot"></span></button
           ></a>
