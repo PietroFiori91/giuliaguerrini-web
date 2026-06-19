@@ -6,18 +6,18 @@
           <!-- LEFT -->
           <div class="col-lg-6">
             <div class="left-content">
-              <h3 class="h2-services stagger-text mb-4">Di cosa mi occupo</h3>
+              <h3 class="h2-services stagger-text mb-4">Percorsi</h3>
 
               <p class="stagger-text intro-text">
                 Accompagno le persone in percorsi di cura e crescita personale,
                 lavorando su ansia, traumi, difficoltà relazionali, disturbi
-                psicosomatici, depressione, disturbi della sfera sessuale,
-                dipendenze, problematiche legate all’immagine di sé e al
-                rapporto con il proprio corpo, disturbi alimentari e problemi
-                evolutivi del ciclo di vita. <br /><br />Su richiesta, integro
-                alla clinica tecniche di respirazione, rilassamento e lavoro
-                mente-corpo per favorire equilibrio psicofisico, presenza,
-                concentrazione e consapevolezza.
+                psicosomatici, burn out, depressione, disturbi della sfera
+                sessuale, dipendenze, problematiche legate all’immagine di sé e
+                al rapporto con il proprio corpo, disturbi alimentari e problemi
+                evolutivi del ciclo di vita. Su richiesta, integro alla clinica
+                tecniche di respirazione, rilassamento e lavoro mente-corpo per
+                favorire equilibrio psicofisico, presenza, concentrazione e
+                consapevolezza.
               </p>
             </div>
           </div>
@@ -188,8 +188,8 @@ const toggle = (index) => {
 }
 
 .accordion-body {
-  height: 110px;
-  padding: 12px 0 0 30px;
+  height: auto;
+  padding: 12px 0 12px 30px;
   overflow: auto;
 }
 

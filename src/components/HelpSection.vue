@@ -16,12 +16,13 @@
             <img src="../assets/images/help-1.png" alt="" class="help-img" />
 
             <div class="help-content">
-              <h4 class="stagger-text">Sofferenza emotiva <br />e trauma</h4>
+              <h4 class="stagger-text">
+                SOFFERENZA EMOTIVA,<br />BURN OUT E TRAUMA
+              </h4>
               <p class="stagger-text">
-                ansia, stress e attacchi di panico
-                <br />depressione e stati di umore deflesso <br />traumi e
-                vissuti di blocco o sopraffazione emotiva <br />difficoltà nella
-                regolazione delle emozioni
+                Ansia, Stress, Attacchi di panico, Depressione e stati di umore
+                deflesso, Traumi, Burn out, Difficoltà nella regolazione delle
+                emozioni
               </p>
             </div>
           </div>
@@ -34,13 +35,13 @@
 
             <div class="help-content">
               <h4 class="stagger-text">
-                Relazioni, identità <br />e sessualità
+                RELAZIONI, IDENTITA’ <br />E SESSUALITA’
               </h4>
               <p class="stagger-text">
-                difficoltà relazionali e affettive
-                <br />difficoltà legate all’immagine di sé e all’identità
-                personale <br />disturbi della sfera sessuale e dell’intimità
-                <br />momenti critici del ciclo di vita e fasi di transizione
+                Difficoltà relazionali e affettive, difficoltà legate
+                all’immagine di sé e all’identità personale, disturbi della
+                sfera sessuale e dell’intimità personale e di coppia, momenti
+                critici del ciclo di vita e fasi di transizione
               </p>
             </div>
           </div>
@@ -52,12 +53,11 @@
             <img src="../assets/images/help-3.png" alt="" class="help-img" />
 
             <div class="help-content">
-              <h4 class="stagger-text">Corpo, sintomi <br />e comportamenti</h4>
+              <h4 class="stagger-text">CORPO <br />E SINTOMI</h4>
               <p class="stagger-text">
-                disturbi psicosomatici <br />disturbi del comportamento
-                alimentare e difficoltà con il rapporto col cibo
-                <br />dipendenze e comportamenti compulsivi <br />difficoltà nel
-                rapporto con il corpo
+                Disturbi del comportamento alimentare, Disturbi psicosomatici,
+                Dipendenze, Comportamenti compulsivi, difficoltà nel rapporto
+                con il corpo e dismorfofobia.
               </p>
             </div>
           </div>

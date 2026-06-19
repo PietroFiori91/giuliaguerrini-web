@@ -26,8 +26,9 @@
 
         <div class="col-10 col-lg-4 text-center">
           <img class="mx-auto mb-5" src="../assets/images/ico-3.png" alt="" />
-          <h4 class="stagger-text mb-3">Indirizzo</h4>
+          <h4 class="stagger-text mb-3">Indirizzi</h4>
           <p class="stagger-text">Milano - via Carlo de Cristoforis 2.</p>
+          <p class="stagger-text">Milano - via Valenza 5.</p>
         </div>
       </div>
     </div>
